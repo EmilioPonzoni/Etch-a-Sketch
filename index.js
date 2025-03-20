@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     grid.style.display = "grid";
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-    
-    
+
     for (let i = 0; i < size * size; i++) {
       let divs = document.createElement("div");
       divs.classList.add("grid-item");
@@ -47,4 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Por favor, ingresa un número válido entre 1 y 100.");
     }
   });
+
+  const borrador = document.querySelector("#borrador");
+
+  borrador.addEventListener("click", function () {
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((div) => {
+      div.addEventListener("mouseover", function () {
+        div.style.backgroundColor = "white"; // Pinta de blanco al pasar el mouse
+      });
+    });
+  });
+
+
+
+  const rndColor = document.querySelector("#random");
+
+  rndColor.addEventListener("click", function(){
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach((div) => {
+      div.addEventListener("mouseover", function () {
+        div.style.backgroundColor = getRandomColor(); // Pinta de un color aleatorio al pasar el mouse
+      });
+    });
+
+  }
+)
 });

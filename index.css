@@ -26,7 +26,7 @@
 
 button {
   display: block;
-  margin: 50px auto;
+  margin: 50px 50px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -37,4 +37,10 @@ button {
     rgba(147, 33, 62, 1) 0%,
     rgba(255, 0, 0, 0.577468487394958) 75%
   );
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  
 }
